@@ -1,0 +1,28 @@
+<app-test></app-test>
+
+<div style="text-align: center;">
+  <h1 style="background-color: aqua;">
+    Welcome To learn about structural directives
+  </h1>
+  @if(isLoggedIn){
+    <div>User is loggedin</div>
+  }
+
+  <table border="1">
+    <tr>
+      <th>EMPLOYEE ID</th>
+      <th>EMPLOYEE NAME</th>
+    </tr>
+    @for(emp of employee; track emp.id){
+      <tr>
+        <td>{{emp.id}}</td>
+        <td>{{emp.name}}</td>
+      </tr>
+    }@empty {
+      <tr>
+        <td colspan="2">No Data Found</td>
+      </tr>
+    }
+  </table>
+</div>
+
